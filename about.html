@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta settings -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WellCare Clinic - About Us</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Internal CSS styles for About Us page -->
+  <style>
+    /* Page content padding */
+    .page-content {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    /* About section layout */
+    .about-section {
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Flex layout for image and text */
+    .about-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    /* Styling for about section images */
+    .about-image {
+      width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.5s ease;
+    }
+
+    /* Text block styles */
+    .about-text {
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .about-text h3 {
+      font-size: 2.2rem;
+      color: #00796b;
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .slide-in-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: slideInLeft 1s ease-out forwards;
+    }
+
+    .slide-in-right {
+      opacity: 0;
+      transform: translateX(50px);
+      animation: slideInRight 1s ease-out forwards;
+    }
+
+    /* Keyframe animations */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Responsive styles for tablets and phones */
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-text {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="logo.jpg" alt="WellCare Logo" />
+      </a>
+
+      <!-- Navigation bar -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="specialties.html">Specialities</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right side of header: appointment button and phone -->
+      <div class="header-right">
+        <a href="appointment.html" class="btn btn-appointment">Book Appointment</a> <!-- Green button -->
+        <a href="tel:80042273" class="phone-link">
+          <span class="phone-icon">📞</span> 800 WellCare (42273)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Title Section -->
+  <main class="page-content">
+    <h2 class="fade-in">About Us</h2>
+    <p class="fade-in" style="max-width: 700px; margin: 20px auto;">
+      WellCare Clinic is your trusted partner in health, combining compassion, modern technology, and expert care to improve lives across the UAE.
+    </p>
+  </main>
+
+  <!-- WHO ARE WE Section -->
+  <section class="about-section">
+    <div class="about-content">
+      <!-- Left: Image -->
+      <img src="group of doctors.jpg" alt="Who We Are" class="about-image slide-in-left" />
+
+      <!-- Right: Text -->
+      <div class="about-text slide-in-right">
+        <h3>Who Are We?</h3>
+        <p>
+          WellCare Clinic is a modern, community-focused healthcare provider dedicated to delivering high-quality medical services with a human touch.
+          We are a team of compassionate doctors, nurses, specialists, and support staff united by a shared commitment to improving the lives 
+          of our patients. Founded on the belief that everyone deserves access to personalized and respectful healthcare, WellCare Clinic 
+          combines clinical excellence with a warm, welcoming environment where every individual feels seen, heard, and cared for.<br>
+          
+          Our clinic serves as a trusted health partner for individuals and families, offering a wide range of services —
+          from routine check-ups and preventive care to chronic condition management and wellness support. We take pride
+          in staying at the forefront of medical advancements while maintaining strong, genuine connections with our
+          community. At WellCare Clinic, we don’t just treat symptoms — we support the whole person, every step of the way.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION Section -->
+  <section class="about-section">
+    <div class="about-content">
+      <!-- Left: Image -->
+      <img src="team workers.jpg" alt="Mission and Vision" class="about-image slide-in-left" />
+
+      <!-- Right: Text -->
+      <div class="about-text slide-in-right">
+        <h3>Mission & Vision</h3>
+        <p>
+          <b>Our Mission</b><br>
+          At WellCare Clinic, our mission is to provide compassionate, accessible, and high-quality healthcare that puts patients first.
+          We are dedicated to promoting health and wellness in our community through personalized care, expert medical guidance,
+          and a deep commitment to integrity, respect, and continuous improvement. We strive to empower individuals to lead healthier 
+          lives by making every visit to our clinic a supportive and healing experience.<br>
+
+          <b>Our Vision</b><br>
+          Our vision is to be a trusted leader in community healthcare — a place where people come not just for treatment,
+          but for long-term wellness, support, and partnership. We aim to shape the future of healthcare by embracing innovation,
+          enhancing patient experiences, and nurturing a culture of excellence. At WellCare Clinic, we envision a healthier tomorrow 
+          where quality care is accessible to all and delivered with empathy, expertise, and heart.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANAGEMENT Section -->
+  <section class="about-section">
+    <div class="about-content">
+      <!-- Left: Image -->
+      <img src="management.jpg" alt="Management" class="about-image slide-in-left" />
+
+      <!-- Right: Text -->
+      <div class="about-text slide-in-right">
+        <h3>Our Management</h3>
+        <p>
+          At WellCare Clinic, our management team is the driving force behind our commitment to excellence in healthcare.
+          Comprising experienced healthcare leaders, medical professionals, and administrative experts, our management brings
+          together a wealth of knowledge, strategic insight, and a deep passion for patient-centered care. With a focus on transparency,
+          efficiency, and innovation, they ensure that every aspect of the clinic operates smoothly — from medical services to
+          patient experience.<br>
+          
+          Our leaders are dedicated to fostering a positive work culture, supporting our staff, and upholding the highest standards 
+          of clinical practice. By staying aligned with the latest advancements in healthcare and continuously evaluating our services,
+          the WellCare Clinic management team ensures that our patients receive the best care possible in a safe, welcoming environment.
+          Their leadership inspires confidence, promotes growth, and strengthens our vision for a healthier community.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="specialties.html">Specialities</a></li>
+            <li><a href="appointment.html">Book Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>📞 800 WellCare (42273)</p>
+          <p>✉️ info@wellcareclinic.ae</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" target="_blank" aria-label="Facebook">🌐 Facebook</a><br />
+            <a href="#" target="_blank" aria-label="Twitter">🐦 Twitter</a><br />
+            <a href="#" target="_blank" aria-label="Instagram">📸 Instagram</a><br />
+            <a href="#" target="_blank" aria-label="LinkedIn">🔗 LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <p>© 2025 WellCare Clinic. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

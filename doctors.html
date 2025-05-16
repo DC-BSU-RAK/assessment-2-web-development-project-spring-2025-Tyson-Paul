@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata and Title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WellCare Clinic - Doctors</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Internal CSS Styles for Doctors Page -->
+  <style>
+    /* Page layout and heading */
+    .page-content {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .page-content h2 {
+      font-size: 2.5rem;
+      color: #0a0a5e;
+      margin-bottom: 40px;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    /* Grid layout for doctor cards */
+    .doctors-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Doctor card styling */
+    .doctor-card {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      max-width: 320px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideInUp 0.8s forwards;
+    }
+
+    /* Hover effect for doctor cards */
+    .doctor-card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Doctor image styling */
+    .doctor-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    /* Doctor name styling */
+    .doctor-card h3 {
+      font-size: 1.5rem;
+      color: #0a0a5e;
+      margin-bottom: 5px;
+    }
+
+    /* Doctor specialty styling */
+    .doctor-card h4 {
+      font-size: 1rem;
+      color: #118e73;
+      margin-bottom: 10px;
+    }
+
+    /* Doctor description styling */
+    .doctor-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Slide-in animation keyframes */
+    @keyframes slideInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Fade-in animation for heading */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive card width for small screens */
+    @media (max-width: 768px) {
+      .doctor-card {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-container">
+      
+      <!-- Logo linking to home -->
+      <a href="index.html" class="logo">
+        <img src="logo.jpg" alt="WellCare Logo" />
+      </a>
+
+      <!-- Navigation menu -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="specialties.html">Specialities</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header right side: Appointment and phone -->
+      <div class="header-right">
+        <a href="appointment.html" class="btn btn-appointment">Book Appointment</a> <!-- Green button -->
+        <a href="tel:80042273" class="phone-link">
+          <span class="phone-icon">📞</span> 800 WellCare (42273)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Doctors Section -->
+  <main class="page-content">
+    <h2>Our Doctors</h2>
+
+    <!-- Container for all doctor cards -->
+    <div class="doctors-grid">
+
+      <!-- Doctor 1 -->
+      <div class="doctor-card" style="animation-delay: 0s;">
+        <img src="General Physician.jpg" alt="Dr. Ayesha Khan">
+        <h3>Dr. Ayesha Khan</h3>
+        <h4>General Physician</h4>
+        <p>Experienced in family medicine and preventive care. Known for building strong patient relationships through clear communication and trust.</p>
+      </div>
+
+      <!-- Doctor 2 -->
+      <div class="doctor-card" style="animation-delay: 0.1s;">
+        <img src="Cardiologist.jpg" alt="Dr. Omar Farooq">
+        <h3>Dr. Omar Farooq</h3>
+        <h4>Cardiologist</h4>
+        <p>Specialist in heart health with a focus on early diagnosis and minimally invasive treatment methods. Passionate about lifestyle-based prevention.</p>
+      </div>
+
+      <!-- Doctor 3 -->
+      <div class="doctor-card" style="animation-delay: 0.2s;">
+        <img src="Pediatrician.jpg" alt="Dr. Fatima Al Zahra">
+        <h3>Dr. Fatima Al Zahra</h3>
+        <h4>Pediatrician</h4>
+        <p>Dedicated to children's health and development. Provides compassionate care from newborns to teens, supporting families at every stage.</p>
+      </div>
+
+      <!-- Doctor 4 -->
+      <div class="doctor-card" style="animation-delay: 0.3s;">
+        <img src="Orthopedic Surgeon.jpg" alt="Dr. Salman Ahmed">
+        <h3>Dr. Salman Ahmed</h3>
+        <h4>Orthopedic Surgeon</h4>
+        <p>Expert in musculoskeletal conditions and joint replacement surgery. Combines skill and compassion to help patients regain mobility.</p>
+      </div>
+
+      <!-- Doctor 5 -->
+      <div class="doctor-card" style="animation-delay: 0.4s;">
+        <img src="Dermatologist.jpg" alt="Dr. Leila Hasan">
+        <h3>Dr. Leila Hasan</h3>
+        <h4>Dermatologist</h4>
+        <p>Specializes in both cosmetic and medical dermatology. Skilled in treating chronic skin conditions with a personalized, gentle approach.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+
+        <!-- Footer section: Quick Links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="specialties.html">Specialities</a></li>
+            <li><a href="appointment.html">Book Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer section: Contact Info -->
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>📞 800 WellCare (42273)</p>
+          <p>✉️ info@wellcareclinic.ae</p>
+        </div>
+
+        <!-- Footer section: Social Media Links -->
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" target="_blank" aria-label="Facebook">🌐 Facebook</a><br />
+            <a href="#" target="_blank" aria-label="Twitter">🐦 Twitter</a><br />
+            <a href="#" target="_blank" aria-label="Instagram">📸 Instagram</a><br />
+            <a href="#" target="_blank" aria-label="LinkedIn">🔗 LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer bottom line -->
+      <div class="footer-bottom">
+        <p>© 2025 WellCare Clinic. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

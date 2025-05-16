@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character encoding and responsive design -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Page title -->
+  <title>WellCare Clinic - Contact Us</title>
+  
+  <!-- External stylesheet link -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Internal CSS styling -->
+  <style>
+    /* Basic body styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Wrapper for page content with padding and animation */
+    .page-content {
+      padding: 2rem;
+      animation: slideIn 1s ease;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* Section title styles */
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #0a0a5e;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Grid layout for contact information */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      animation: slideIn 1.2s ease;
+    }
+
+    /* Styles for individual info boxes */
+    .info-box {
+      background: #fff;
+      border-left: 5px solid #00796b;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Headings inside info boxes */
+    .info-box h3 {
+      color: #00796b;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Feedback form container */
+    .feedback-box {
+      margin-top: 2rem;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      border-left: 5px solid #00796b;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+      animation: slideIn 1.4s ease;
+    }
+
+    /* Layout for form fields */
+    .feedback-box form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    /* Input and textarea styling */
+    .feedback-box input,
+    .feedback-box textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    /* Submit button styling */
+    .feedback-box button {
+      background: #00796b;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    /* Button hover effect */
+    .feedback-box button:hover {
+      background: #005f54;
+    }
+
+    /* Container for embedded Google Map */
+    .map-box {
+      margin-top: 2rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+      animation: slideIn 1.6s ease;
+    }
+
+    /* iFrame (Google Map) styling */
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+
+    /* Slide-in animation */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive layout for smaller screens */
+    @media (max-width: 768px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER SECTION -->
+  <header class="header">
+    <div class="container header-container">
+      <!-- Logo linking to homepage -->
+      <a href="index.html" class="logo">
+        <img src="logo.jpg" alt="WellCare Logo" />
+      </a>
+
+      <!-- Main navigation menu -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="specialties.html">Specialities</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right side of header with appointment button and phone -->
+      <div class="header-right">
+        <a href="appointment.html" class="btn btn-appointment">Book Appointment</a>
+        <a href="tel:80042273" class="phone-link">
+          <span class="phone-icon">📞</span> 800 WellCare (42273)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN PAGE CONTENT -->
+  <main class="page-content">
+    <!-- Page title -->
+    <h2>Contact Us</h2>
+
+    <!-- Contact information grid layout -->
+    <div class="info-grid">
+      <!-- Opening Hours -->
+      <div class="info-box">
+        <h3>Opening Hours</h3>
+        <p>Monday – Friday: 8:00 AM – 8:00 PM</p>
+        <p>Saturday – Sunday: 9:00 AM – 5:00 PM</p>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="info-box">
+        <h3>Contact Details</h3>
+        <p>P.O. Box 12345</p>
+        <p>Phone: +971 4 123 4567</p>
+        <p>Email: info@wellcareclinic.ae</p>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="info-box">
+        <h3>Follow Us</h3>
+        <p><a href="#">Facebook</a></p>
+        <p><a href="#">Instagram</a></p>
+        <p><a href="#">Twitter</a></p>
+      </div>
+
+      <!-- Physical Address -->
+      <div class="info-box">
+        <h3>Address</h3>
+        <p>WellCare Clinic<br>
+          Office 210, Al Fattan Plaza<br>
+          Airport Road, Al Garhoud<br>
+          Dubai, United Arab Emirates<br></p>
+      </div>
+    </div>
+
+    <!-- Feedback form section -->
+    <div class="feedback-box">
+      <h3>Ask a Question / Give Feedback</h3>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message or Feedback..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Embedded Google Map -->
+    <div class="map-box">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.159012751155!2d144.9559281155903!3d-37.81720974209359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f2e8f4e5%3A0x2a0b3c4ee91d1c1a!2s123%20Health%20St%2C%20Wellness%20City!5e0!3m2!1sen!2sus!4v1700000000000"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Footer navigation links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="specialties.html">Specialities</a></li>
+            <li><a href="appointment.html">Book Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact information in footer -->
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>📞 800 WellCare (42273)</p>
+          <p>✉️ info@wellcareclinic.ae</p>
+        </div>
+
+        <!-- Social media links in footer -->
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" target="_blank" aria-label="Facebook">🌐 Facebook</a><br />
+            <a href="#" target="_blank" aria-label="Twitter">🐦 Twitter</a><br />
+            <a href="#" target="_blank" aria-label="Instagram">📸 Instagram</a><br />
+            <a href="#" target="_blank" aria-label="LinkedIn">🔗 LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer copyright -->
+      <div class="footer-bottom">
+        <p>© 2025 WellCare Clinic. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

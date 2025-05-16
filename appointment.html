@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta and basic setup -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WellCare - Appointment</title>
+  
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Internal CSS for page styling -->
+  <style>
+    /* Basic reset and page background */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header styling */
+    .header {
+      background-color: #ffffff;
+      border-bottom: 2px solid #e0e0e0;
+      padding: 1rem 0;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px; /* Logo height */
+    }
+
+    /* Navigation list styles */
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Navigation link styles */
+    .nav-list a {
+      text-decoration: none;
+      color: #00796b;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-list a:hover {
+      color: #00796b;
+    }
+
+    /* Right side of the header */
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Appointment button style */
+    .btn-appointment {
+      background-color: #64b54f;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Hover animation for specialities (used elsewhere) */
+    .speciality-item:hover {
+      transform: translateX(5px);
+    }
+
+    /* Phone number link style */
+    .phone-link {
+      color: #0a0a5e;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Icons/buttons */
+    .search-btn, .menu-btn {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    /* Appointment page content box */
+    .page-content {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #ffffff;
+      border-left: 5px solid #00796b;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+      animation: slideIn 1s ease;
+    }
+
+    .page-content h2 {
+      text-align: center;
+      color: #0a0a5e;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      animation: slideIn 0.8s ease;
+    }
+
+    /* Form layout */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Form field container */
+    .form-box {
+      background-color: #f1fdfc;
+      border: 1px solid #cde6e4;
+      padding: 1rem;
+      border-radius: 8px;
+      animation: slideIn 1s ease;
+    }
+
+    /* Form labels */
+    label {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    /* Inputs and dropdowns */
+    input, select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    /* Focused input styles */
+    input:focus, select:focus {
+      border-color: #00796b;
+      outline: none;
+    }
+
+    /* Submit button */
+    button[type="submit"] {
+      background-color: #00796b;
+      color: #fff;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      animation: slideIn 1s ease;
+    }
+
+    /* Hover effect for submit */
+    button[type="submit"]:hover {
+      background-color: #005f54;
+    }
+
+    /* Slide-in animation used across page */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .nav-list {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .page-content {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER SECTION -->
+  <header class="header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="logo.jpg" alt="WellCare Logo" />
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="specialties.html">Specialities</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Side of Header -->
+      <div class="header-right">
+        <a href="appointment.html" class="btn btn-appointment">Book Appointment</a>
+        <a href="tel:80042273" class="phone-link">
+          <span class="phone-icon">📞</span> 800 WellCare (42273)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-content">
+    <h2>Book an Appointment</h2>
+    
+    <!-- Appointment Form -->
+    <form id="appointment-form" action="#" method="POST">
+      
+      <!-- Name Field -->
+      <div class="form-box">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <!-- Email Field -->
+      <div class="form-box">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <!-- Phone Field -->
+      <div class="form-box">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+
+      <!-- Doctor Selection -->
+      <div class="form-box">
+        <label for="doctor">Choose Doctor</label>
+        <select id="doctor" name="doctor" required>
+          <option value="" disabled selected>Select a doctor</option>
+          <option value="Dr. Ayesha Khan">Dr. Ayesha Khan</option>
+          <option value="Dr. Omar Farooq">Dr. Omar Farooq</option>
+          <option value="Dr. Fatima Al Zahra">Dr. Fatima Al Zahra</option>
+          <option value="Dr. Salman Ahmed">Dr. Salman Ahmed</option>
+          <option value="Dr. Salman Ahmed">Dr. Leila Hasan</option> <!-- Note: Duplicate value -->
+        </select>
+      </div>
+
+      <!-- Date Picker -->
+      <div class="form-box">
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+
+      <!-- Time Picker -->
+      <div class="form-box">
+        <label for="time">Preferred Time</label>
+        <input type="time" id="time" name="time" required />
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        
+        <!-- Footer Links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="specialties.html">Specialities</a></li>
+            <li><a href="appointment.html">Book Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>📞 800 WellCare (42273)</p>
+          <p>✉️ info@wellcareclinic.ae</p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" target="_blank" aria-label="Facebook">🌐 Facebook</a><br />
+            <a href="#" target="_blank" aria-label="Twitter">🐦 Twitter</a><br />
+            <a href="#" target="_blank" aria-label="Instagram">📸 Instagram</a><br />
+            <a href="#" target="_blank" aria-label="LinkedIn">🔗 LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>© 2025 WellCare Clinic. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Starts the HTML document and sets the language to English -->
+<head>
+  <!-- Meta tags for character set and responsive design -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Page title -->
+  <title>WellCare - Specialities</title>
+
+  <!-- External stylesheet link -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Internal CSS styling for layout, animation, and responsiveness -->
+  <style>
+    /* Basic body styling */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Container for main content */
+    .page-content {
+      padding: 2rem;
+      animation: slideIn 1s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Heading styling */
+    h2 {
+      font-size: 2rem;
+      color: #0a0a5e;
+      margin-bottom: 1rem;
+    }
+
+    /* Search bar container */
+    .search-bar {
+      margin-bottom: 2rem;
+      animation: slideIn 1.2s ease-in-out;
+    }
+
+    /* Search bar input field */
+    .search-bar input {
+      padding: 0.5rem 1rem;
+      width: 300px;
+      max-width: 90%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    /* List container for all specialities */
+    .specialities-list {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    /* Individual speciality item */
+    .speciality-item {
+      background: #fff;
+      padding: 1rem;
+      border-left: 5px solid #00796b;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    /* Hover effect for speciality item */
+    .speciality-item:hover {
+      transform: translateX(5px);
+    }
+
+    /* Name/title of the speciality */
+    .speciality-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #00796b;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Slide-in animation */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive styles for mobile screens */
+    @media (max-width: 600px) {
+      .search-bar input {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER SECTION -->
+  <header class="header">
+    <div class="container header-container">
+      <!-- Logo linked to home page -->
+      <a href="index.html" class="logo">
+        <img src="logo.jpg" alt="WellCare Logo" />
+      </a>
+
+      <!-- Main navigation menu -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="specialties.html">Specialities</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right section with appointment button and phone contact -->
+      <div class="header-right">
+        <a href="appointment.html" class="btn btn-appointment">Book Appointment</a> <!-- Green button -->
+        <a href="tel:80042273" class="phone-link">
+          <span class="phone-icon">📞</span> 800 WellCare (42273)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT SECTION -->
+  <main class="page-content">
+    <!-- Page heading -->
+    <h2>Our Specialities</h2>
+
+    <!-- Search bar for filtering specialities -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for a speciality..." />
+    </div>
+
+    <!-- List of all specialities -->
+    <ul class="specialities-list" id="specialitiesList">
+      <!-- Each list item contains a speciality name and short description -->
+      <li class="speciality-item"><div class="speciality-name">Allergy & Immunology</div><div>Treatment for allergic conditions and immune system disorders.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Cardiology</div><div>Care for heart conditions including arrhythmia and heart failure.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Dermatology</div><div>Skin, hair, and nail health including acne and eczema.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Endocrinology</div><div>Hormone-related disorders such as diabetes and thyroid disease.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Gastroenterology</div><div>Digestive system issues including ulcers and IBS.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Hematology</div><div>Diagnosis and treatment of blood disorders.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Internal Medicine</div><div>Comprehensive care for adult patients with chronic illnesses.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Neurology</div><div>Brain and nervous system disorders such as epilepsy and migraines.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Obstetrics & Gynecology</div><div>Women's health, pregnancy care, and reproductive system support.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Oncology</div><div>Cancer diagnosis and treatment with personalized care.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Ophthalmology</div><div>Vision and eye care including surgery and laser correction.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Orthopedics</div><div>Bone, joint, and spine treatment including fractures and arthritis.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Otolaryngology (ENT)</div><div>Ear, nose, and throat disorders including hearing loss.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Pediatrics</div><div>Medical care for infants, children, and adolescents.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Psychiatry</div><div>Mental health and emotional well-being support.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Pulmonology</div><div>Lung and respiratory system care including asthma and COPD.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Radiology</div><div>Medical imaging to diagnose and treat conditions.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Rheumatology</div><div>Autoimmune and joint disorders like arthritis and lupus.</div></li>
+      <li class="speciality-item"><div class="speciality-name">Urology</div><div>Urinary tract and male reproductive health treatment.</div></li>
+    </ul>
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Quick links section -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="specialties.html">Specialities</a></li>
+            <li><a href="appointment.html">Book Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact details section -->
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>📞 800 WellCare (42273)</p>
+          <p>✉️ info@wellcareclinic.ae</p>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" target="_blank" aria-label="Facebook">🌐 Facebook</a><br />
+            <a href="#" target="_blank" aria-label="Twitter">🐦 Twitter</a><br />
+            <a href="#" target="_blank" aria-label="Instagram">📸 Instagram</a><br />
+            <a href="#" target="_blank" aria-label="LinkedIn">🔗 LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <!-- Footer copyright -->
+      <div class="footer-bottom">
+        <p>© 2025 WellCare Clinic. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for search/filtering functionality -->
+  <script>
+    // Get search input field and all speciality items
+    const searchInput = document.getElementById("searchInput");
+    const listItems = document.querySelectorAll(".speciality-item");
+
+    // Listen for keyup event to filter specialities
+    searchInput.addEventListener("keyup", function () {
+      const filter = this.value.toLowerCase(); // Convert input to lowercase
+      listItems.forEach(item => {
+        const text = item.textContent.toLowerCase(); // Match against item text
+        item.style.display = text.includes(filter) ? "block" : "none"; // Show/hide based on match
+      });
+    });
+  </script>
+</body>
+</html>
